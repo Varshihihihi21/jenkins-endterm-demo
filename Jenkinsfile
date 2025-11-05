@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // 🔹 Replace with your actual GitHub URL
-                git url: 'https://github.com/<your-username>/jenkins-endterm-demo.git', branch: 'main'
+                git url: 'https://github.com/Varshihihihi21/jenkins-endterm-demo.git', branch: 'main'
+
             }
         }
 
