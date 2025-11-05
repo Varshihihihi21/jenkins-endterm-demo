@@ -11,40 +11,47 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building project...'
+                echo '🏗️ Building project...'
                 bat 'mvn clean compile'
             }
         }
 
         stage('Unit Test') {
             steps {
-                echo 'Running tests...'
+                echo '🧪 Running tests...'
                 bat 'mvn test'
             }
         }
 
         stage('SonarQube Analysis') {
             when {
-                expression { return false } // change to true when SonarQube setup is ready
+                expression { return false } // Set to true when SonarQube setup is ready
             }
             steps {
-                echo 'SonarQube analysis would run here.'
+                echo '🔍 SonarQube analysis would run here.'
             }
         }
 
         stage('Package') {
             steps {
-                echo 'Packaging application...'
+                echo '📦 Packaging application...'
                 bat 'mvn package'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Starting Deployment...'
+                echo '🚀 Starting Deployment...'
                 bat 'if not exist C:\\deploy mkdir C:\\deploy'
                 bat 'copy target\\*.jar C:\\deploy\\ /Y'
-                echo 'Deployment successful! JAR copied to C:\\deploy'
+                echo '✅ Deployment successful! JAR copied to C:\\deploy'
+            }
+        }
+
+        stage('Run App') {
+            steps {
+                echo '▶️ Running deployed JAR file...'
+                bat 'java -jar C:\\deploy\\jenkins-endterm-1.0-SNAPSHOT.jar'
             }
         }
     }
