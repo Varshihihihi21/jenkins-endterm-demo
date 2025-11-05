@@ -6,7 +6,6 @@ pipeline {
             steps {
                 // 🔹 Replace with your actual GitHub URL
                 git url: 'https://github.com/Varshihihihi21/jenkins-endterm-demo.git', branch: 'main'
-
             }
         }
 
@@ -47,6 +46,7 @@ pipeline {
                 bat 'copy target\\*.jar C:\\deploy\\ /Y'
                 echo 'Deployment successful! JAR copied to C:\\deploy'
             }
+        }
     }
 
     post {
