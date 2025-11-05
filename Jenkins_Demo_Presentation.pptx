@@ -1,0 +1,53 @@
+[Presentation Outline]
+
+Slide 1: Title
+- Jenkins End Term Project Demo
+- Your Name
+
+Slide 2: Project Overview
+- Brief description of the Java Maven project
+- Purpose of the demo
+
+Slide 3: Jenkins Pipeline Workflow
+- Visual diagram of pipeline stages
+- Explanation of CI/CD process
+
+Slide 4: Stage 1 - Checkout
+- Description: Cloning code from GitHub repository
+- Screenshot placeholder: Jenkins job checkout step
+
+Slide 5: Stage 2 - Build
+- Description: Maven build (mvn clean compile)
+- Screenshot placeholder: Build logs
+
+Slide 6: Stage 3 - Unit Test
+- Description: Running JUnit tests (mvn test)
+- Screenshot placeholder: Test results
+
+Slide 7: Stage 4 - SonarQube Analysis (Optional)
+- Description: Static code analysis (if configured)
+- Screenshot placeholder: SonarQube dashboard
+
+Slide 8: Stage 5 - Package
+- Description: Packaging the application (mvn package)
+- Screenshot placeholder: Artifact creation
+
+Slide 9: Stage 6 - Deploy
+- Description: Deployment step (copy jar/run locally)
+- Screenshot placeholder: Deployment logs
+
+Slide 10: Integration with GitHub & Maven
+- How Jenkins connects to GitHub and uses Maven
+- Screenshot placeholder: GitHub repo & pom.xml
+
+Slide 11: Summary & Results
+- Recap of automated workflow
+- Benefits of CI/CD
+- Final outcome
+
+Slide 12: Q&A
+- Invite questions from audience
+
+[Instructions]
+- Replace screenshot placeholders with actual images from your Jenkins job and codebase.
+- Customize text as needed for your presentation style.
