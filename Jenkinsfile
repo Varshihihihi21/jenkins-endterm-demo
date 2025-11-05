@@ -42,10 +42,11 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying JAR (simulated)...'
-                bat 'java -cp target\\jenkins-endterm-1.0-SNAPSHOT.jar App'
+                echo 'Starting Deployment...'
+                bat 'if not exist C:\\deploy mkdir C:\\deploy'
+                bat 'copy target\\*.jar C:\\deploy\\ /Y'
+                echo 'Deployment successful! JAR copied to C:\\deploy'
             }
-        }
     }
 
     post {
